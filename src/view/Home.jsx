@@ -13,7 +13,7 @@ function DonationForm() {
 
     // Open modal on page load
     useEffect(() => {
-        // setModal(true);
+        setModal(true);
     }, []);
 
     // Toggle modal visibility
@@ -55,7 +55,7 @@ function DonationForm() {
         }
     };
     return (
-        <div className="bg-container d-flex align-items-center justify-content-center vh-100">
+        <div className="bg-container d-flex align-items-center justify-content-center vh-lg-100">
             {/* Modal with image and automatic close button */}
             <Modal isOpen={modal} toggle={toggleModal} centered size="lg">
                 <ModalHeader toggle={toggleModal} />
@@ -68,7 +68,7 @@ function DonationForm() {
             <form onSubmit={handleSubmit}>
                 <div className="card p-4 shadow-lg" style={{ maxWidth: '1000px', width: '100%' }}>
                     {onsuccess ? (<>
-                        <div className='px-5 py-2 text-center' style={{width:'600px'}}>
+                        <div className='px-5 py-2 text-center' style={{ width: '600px' }}>
                             <img src={svgexport} alt="Success" className="img-fluid mb-4" height={'auto'} width={'300px'} />
                             <h2 className="mb-3 text-success">Thank You!</h2>
                             <p className="text-muted">We will contact you soon.</p>
